@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
           appBar: AppBar(title: Text("Hola Mundo")),
-          body: new DescriptionPlace("Bahamas", 4, descriptionDummy),
+          body: new DescriptionPlace("Bahamas", 3.5, descriptionDummy),
         ));
   }
 }
