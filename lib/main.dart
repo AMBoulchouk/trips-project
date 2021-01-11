@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
+import 'reviewList.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,8 +18,12 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          appBar: AppBar(title: Text("Hola Mundo")),
-          body: new DescriptionPlace("Bahamas", 3.5, descriptionDummy),
-        ));
+            appBar: AppBar(title: Text("Hola Mundo")),
+            body: Column(
+              children: [
+                //new DescriptionPlace("Bahamas", 3.5, descriptionDummy),
+                new ReviewList(),
+              ],
+            )));
   }
 }
