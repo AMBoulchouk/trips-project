@@ -7,18 +7,15 @@ class ReviewList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: listReview(),
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Review("assets/img/people.jpg", "Varuna Yasas", "1 review 5 photos",
+            "There is an amazing\nplace in Sri Lanka"),
+        Review("assets/img/people.jpg", "Sacamocos", "1 review 5 photos",
+            "There is an amazing \nplace in Sri Lanka"),
+        Review("assets/img/people.jpg", "Elcacas", "1 review 5 photos",
+            "There is an amazing \nplace in Sri Lanka"),
+      ],
     );
-  }
-
-  List<Widget> listReview() {
-    List<Widget> contenedor = [];
-
-    for (var i = 0; i < 5; i++) {
-      contenedor.add(Review(url, "Varuna Yasas", "1 review 5 photos",
-          "Theres is an amazing place in Sri Lanka"));
-    }
-
-    return contenedor;
   }
 }

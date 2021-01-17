@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'description_place.dart';
 import 'reviewList.dart';
+import 'gradientBack.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,18 +14,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //esconde la barra del navegador android
+    SystemChrome.setEnabledSystemUIOverlays([]);
+    //fin de esconde la barra del navegador android
     return MaterialApp(
         title: 'Flutter Trips',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-            appBar: AppBar(title: Text("Hola Mundo")),
-            body: Column(
-              children: [
-                //new DescriptionPlace("Bahamas", 3.5, descriptionDummy),
-                new ReviewList(),
-              ],
-            )));
+          body: Stack(
+            children: [
+              ListView(
+                children: [
+                  DescriptionPlace("Bahamas", 3.5, descriptionDummy),
+                  ReviewList(),
+                ],
+              ),
+              GradientBack("Popular"),
+            ],
+          ),
+        ));
   }
 }
