@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'homeTrips.dart';
-import 'searchTrips.dart';
-import 'profileTrips.dart';
+import 'home/homeTrips.dart';
+import 'search/searchTrips.dart';
+import 'profile/profileTrips.dart';
 
 class Trips extends StatefulWidget {
   @override
